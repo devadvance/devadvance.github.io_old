@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+}
+
+a{
+    color:#1a5c67;
+}
+
+a img{
+    border:none;
+}
+
+body{
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-size:2560px 400px;
+
+    background-image:url('../images/topImage2.jpg');
+}
+
+body,html{
+    width:100%;
+    height:100%;
+    font-family: "Arial";
+    font-size: 13px;
+    background-color:#e5e5e5;
+}
+
+.main{
+    position: relative;
+    width:90%;
+    min-width: 600px;
+    margin: 0 auto;
+    display: block;
+   
+    
+    overflow: hidden;
+}
+
+.items{
+    list-style: none;
+    margin:0;
+    padding:0;
+    padding:15px;
+}
+
+.item{
+    box-shadow: 0 3px 2px -2px #ccc;
+    border-radius: 2px;
+    background-color:#fff;
+    overflow: hidden;
+    margin-bottom:15px;
+    
+     transform:translate(0px,300px);
+    -webkit-transform:translate(0px,300px);
+     
+   
+   -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    
+    opacity:0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.topCard {
+    
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.secondaryTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+.item.animate{
+    transform:translate(0px,0px);
+    -webkit-transform:translate(0px,0px);
+    opacity:1;
+     
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+ 
+
+
+
+   
