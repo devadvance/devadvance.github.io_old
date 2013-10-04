@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html" charset="ISO-8859-1">
+        <title>devadvance - SMS Backup Reader</title>
+        <meta name="keywords" content="java,open source,devadvance,Matt Joseph,sms backup reader,ritesh sahu,android">
+        <meta name="author" content="Matt Joseph">
+        <link rel="stylesheet" type="text/css" media="screen" href="../style/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,500,400' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="../js/functions.js"></script>
+    </head>
+    <body>
+        <div class="main">
+        
+            <div class="items">
+                <div class="item topCard"></div>
+                <div class="item">
+                    <div class="title">SMS Backup Reader</div>
+                </div>
+                <div class="item">
+                    <img src="../images/smsBackupReader_v0.7.png" style="display: block; width:350px; height: 275px; text-align:center; padding: 5px; position: relative; float:left;" />
+                    <strong>SMS Backup Reader v0.7</strong><br />
+                    <p>
+                        This program is designed to read the XML backup files produced by the Android app SMS Backup &amp; Restore by Ritesh.
+                        SMS Backup and Restore Android App: https://market.android.com/details?id=com.riteshsahu.SMSBackupRestore
+                    </p>
+                    <br />
+                    <a href="http://sourceforge.net/p/smsbackupreader/home/Home/">Sourceforge Project Page</a><br />
+                    Download Latest Version: <a title="http://sourceforge.net/projects/smsbackupreader/files/latest/download?source=files" href="http://sourceforge.net/projects/smsbackupreader/files/latest/download?source=files">Latest Version</a><br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <h3><strong>How to use:</strong></h3>
+                    <ol style="font-size:14px;list-style:decimal inside;">
+                        <li><strong>Download the latest version of SMS Backup Reader from the link above.</strong></li>
+                        <li><strong>This program requires Java to run. If you do not have Java installed, please visit the Java website to obtain it: <a href="http://www.java.com/">http://www.java.com</a></strong></li>
+                        <li><strong>To run, simply double-click on SMS Backup Reader. If it opens as a folder and shows you multiple files inside, then either you do not have Java installed, or you need to go back, right-click on SMS Backup Reader, and open it with Java.</strong></li>
+                        <li><strong>Enter your country code. The default is 1 for the U.S. For example, the U.K. is 44.</strong></li>
+                        <li><strong>There is an option to change the timezone hours offset for the received messages. <span style="color: #ff0000;">ONLY use this if you have previously encountered issues when loading messages!</span></strong></li>
+                        <li><strong>Once it is open, choose the file you want to load by clicking the appropriate button.</strong></li>
+                        <li><strong>Next, click Load!.</strong></li>
+                        <li><strong>To see different conversations, click on the contacts on the left side. The numbers are the PHONE NUMBERS of the contacts. If there are no names showing, it is because you did not backup the names using SMS Backup &amp; Restore. SMS Backup Reader does not know the names unless they are in the file.</strong></li>
+                        <li><strong>To export a specific conversation, click on that contact, and click the Export button.</strong></li>
+                        <li><strong>To export all conversations, click on the Export All button.</strong></li>
+                        <li><strong>Close the program when you are finished.</strong></li>
+                    </ol>
+                    <br />
+                    <div><span style="text-decoration: underline;"><span style="font-size: small;"><span style="line-height: 16px;"><strong>Similar instructions are available in English, Spanish, Hindi, and Dutch inside of the program.</strong></span></span></span></div>
+                    <br />
+                    <br />
+                    Current Features:
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Issue reading some backup files. Probably due to certain cases of formatting (Such as an email address instead of a number)</li>
+                        <li>Poorly formatted XML files will cause the program to do nothing when you click load (for example, if "&amp;#0" is in the XML file). This is a null character and shouldn't be there. Working on a way to ignore it</li>
+                    </ul>
+                    <br />
+                    Current Features:
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Country code selection. You may have a contact stored one way, but when the SMS comes in, it may have the full international prefix and country code, even if it is from that same country you are in. Entering the country code of your number helps solve some of this problem.</li>
+                        <li>Separate message threads for each contact.</li>
+                        <li>"Sent" and "Received" and date/time information for each message.</li>
+                        <li>Export all conversations as a single text file divided by contact (easy archiving for later reading/printing).</li>
+                        <li>International support (UTF-8)</li>
+                    </ul>
+                    <br />
+                    To-do:
+                     <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Country code drop down instead of entering manually.</li>
+                        <li>Read other backups. (Call Log, APN, etc).</li>
+                    </ul>
+                    <br />
+                    <br />
+                    +++++++++++++++++++++++++
+                    <br />
+                    Changelog:<br />
+                    <br />
+                    v0.7 - 2013-05-10
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Completely recoded and tested the project:</li>
+                        <li>Tested with Java 6 and 7, on Windows 7, Windows 8, Ubuntu, and OS X 10.8.</li>
+                        <li>Eclipse instead of NetBeans</li>
+                        <li>Refactored to better fit the Java programming model: BackupReader is now a separate class, enabling GUI/CLI creation as a separate entity.</li>
+                        <li>Better commenting (still needs more).</li>
+                        <li>Feedback for load success/failure</li>
+                        <li>Added error codes to deal with problems reading files.</li>
+                        <li>Feedback for export success/failure.</li>
+                        <li>Added better international support (Unicode font and UTF-8 parsing).</li>
+                    </ul>
+                    <br />
+                    v0.6 - 2012-05-20
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Added the ability to change the received message time offset.<br />This will make it so you can effectively change the timezone. Default is 0 (zero), if it already works, don't change it!</li>
+                    </ul>
+                    <br />
+                    v0.5.1 - 2011-12-02
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Forgot to remove some debugging statements</li>
+                        <li>Extra address checking</li>
+                    </ul>
+                    <br />
+                    v0.5 - 2011-12-02
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Added help in 4 languages</li>
+                        <li>Fixed an issue with draft messages. The address is "null" for drafts.</li>
+                        <li>Fixed an issue with short codes. If the address is less than 6, assume its a short code.</li>
+                        <li>Tested with the latest backups from SMS Backup &amp; Restore (as of 2011-12-02) and old backups (2011-07-20).</li>
+                    </ul>
+                    <br />
+                    v0.3.5 - 2011-10-26
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Added the ability to export selected contact messages.</li>
+                        <li>Added popups to warn if no messages were loaded rather than simply doing nothing.</li>
+                    </ul>
+                    <br />
+                    v0.3 - 2011-10-26
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Added the ability to export all messages as a file</li>
+                    </ul>
+                    <br />
+                    v0.2.1 - 2011-09-05
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li></li>
+                    </ul>
+
+                    -Fixed a bug or two
+                    <br />
+                    v0.2 - 2011-08-03
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Added the ability to specify country code. This should help with multiple versions of the same contact.</li>
+                        <li>Bug fix, code cleanup</li>
+                    </ul>
+                    <br />
+                    v0.1.5 - 2011-07-31
+                    <ul style="font-size:14px;list-style:circle inside;">
+                        <li>Fix for initial release (v0.1 had some issues).</li>
+                    </ul>
+                    <br />
+                    +++++++++++++++++++++++++
+                    <br />
+                    <strong>A quick thanks to Ritesh for supporting this, for linking to it from his site, and for designing and maintaining the Android app that makes SMS backups quick and easy.</strong>
+                </div>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>
