@@ -1,98 +1,314 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>RootCloak | devadvance</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-        <meta name="keywords" content="java,open source,devadvance,Matt Joseph,rootcloak,root,android">
-        <meta name="description" content="devadvance project website">
-        <meta name="author" content="Matt Joseph">
-        <link rel="stylesheet" type="text/css" media="screen" href="../style/style.css" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:300,500,400' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
-        <script type="text/javascript" src="../js/functions.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="devadvance project website">
+    <meta name="keywords" content="java,open source,devadvance,Matt Joseph">
+    <meta name="author" content="Matt Joseph">
+    <title>devadvance | RootCloak (Xposed)</title>
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/gatracking.js"></script>
+  </head>
+  <body>
+  <div id="menuDiv">
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+            <li class="name">
+            <h1><a href="#">devadvance</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+          </ul>
 
-          ga('create', 'UA-44453238-1', 'devadvance.com');
-          ga('send', 'pageview');
+          <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li><a href="/">Home</a></li>
+              <li class="has-dropdown">
+              <a href="#">Projects</a>
+                <ul class="dropdown">
+                  <li><a href="/rootcloak/">RootCloak (Xposed)</a></li>
+                  <li><a href="/rootcloakplus/">RootCloak Plus (Cydia)</a></li>
+                  <li><a href="/sms-backup-reader/">SMS Backup Reader</a></li>
+                  <li><a href="/circularseekbar/">CircularSeekBar</a></li>
+                </ul>
+              </li>
+              <li><a href="http://matthewgjoseph.com">Personal Site</a></li>
+            </ul>
+          </section>
+        </nav>
+    </div>
+  </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>RootCloak (Xposed)</h1>
+      </div>
+    </div>
 
-        </script>
-    </head>
-    <body>
-        <div class="main">
-        
-            <div class="items">
-                <div class="item topCard">
-                    <div class="title">RootCloak</div>
-                </div>
-
-                <div class="item menuCard" id="menu">
-                    <div id="navBarMain">
-                        <div id="homeTab">
-                            <a href="/">Home</a>
-                        </div>
-                        <div id="projectsTab">
-                            <a href="#">Projects</a>
-                            <ul>
-                                <li><a href="/circularseekbar/">CircularSeekBar</a></li>
-                                <li><a href="/sms-backup-reader/">SMS Backup Reader</a></li>
-                                <li><a href="/rootcloak/">RootCloak</a></li>
-                                <li><a href="/rootcloakplus/">RootCloak Plus</a></li>
-                            </ul>
-                        </div>
-                        <div id="personalTab">
-                            <a href="http://matthewgjoseph.com">Personal Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="../images/RootCloakIcon.png" style="display: block; width:256px; height: 256px; text-align:center; padding: 5px; position: relative; float:left;" />
-                    <img src="../images/RootCloak.png" style="display: block; width:216px; height: 384px; text-align:center; padding: 5px; position: relative; float:right;" />
-                    <strong>RootCloak</strong><br />
-                    <p>
-                        This Android app is a module for the Xposed Framework. Some apps, such as banking, enterprise, or audio/video apps will not run if your phone is rooted. This allows you to run apps that detect root without disabling root.
-                    </p>
-                    <br />
-                    <b>Downloads: <a title="http://repo.xposed.info/module/com.devadvance.rootcloak" href="http://repo.xposed.info/module/com.devadvance.rootcloak">Xposed Module Repo</a><br />
-                    Support: <a title="http://forum.xda-developers.com/showthread.php?t=2574647" href="http://forum.xda-developers.com/showthread.php?t=2574647">XDA Thread</a><br />
-                    Source Code: <a title="https://github.com/devadvance/rootcloak" href="https://github.com/devadvance/rootcloak">GitHub Repo</a></b><br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <h3><strong>Apps successfully tested:</strong></h3>
-                    <ul style="font-size:14px;list-style:inside;">
-                        <li>DME Mail - Excitor - <a href="https://play.google.com/store/apps/details?id=dk.excitor.dmemail">https://play.google.com/store/apps/details?id=dk.excitor.dmemail</a></li>
-                        <li>Fox Digital Copy - Fox - <a href="https://play.google.com/store/apps/details?id=com.fde.DomesticDigitalCopy">https://play.google.com/store/apps/details?id=com.fde.DomesticDigitalCopy</a></li>
-                        <li>DirecTV GenieGo - DirecTV - <a href="https://play.google.com/store/apps/details?id=com.directv.application.android.go.production">https://play.google.com/store/apps/details?id=com.directv.application.android.go.production</a></li>
-                        <li>Best Buy CinemaNow - Best Buy - <a href="https://play.google.com/store/apps/details?id=com.res.bby">https://play.google.com/store/apps/details?id=com.res.bby</a></li>
-                        <li>Bright House TV - Bright House - <a href="https://play.google.com/store/apps/details?id=com.BHTV">https://play.google.com/store/apps/details?id=com.BHTV</a></li>
-                        <li>Mobile Pay - Apriva - <a href="https://play.google.com/store/apps/details?id=com.apriva.mobile.bams">https://play.google.com/store/apps/details?id=com.apriva.mobile.bams</a></li>
-                        <li>AprivaPay - Apriva - <a href="https://play.google.com/store/apps/details?id=com.apriva.mobile.aprivapay">https://play.google.com/store/apps/details?id=com.apriva.mobile.aprivapay</a></li>
-                        <li>IKO - PKO Bank Polski SA - <a href="https://play.google.com/store/apps/details?id=pl.pkobp.iko">https://play.google.com/store/apps/details?id=pl.pkobp.iko</a></li>
-                        <li>Bradford Mobile Agent - Bradford Networks - <a href="https://play.google.com/store/apps/details?id=com.bradfordnetworks.bma">https://play.google.com/store/apps/details?id=com.bradfordnetworks.bma</a></li>
-                        <li>ParcelSend - Australia Post Digital - <a href="https://play.google.com/store/apps/details?id=au.com.auspost">https://play.google.com/store/apps/details?id=au.com.auspost</a></li>
-                        <li>Worx Home by Citrix - Zenprise - <a href="https://play.google.com/store/apps/details?id=com.zenprise">https://play.google.com/store/apps/details?id=com.zenprise</a></li>
-                        <li>Movies by Flixster - Flixster - <a href="https://play.google.com/store/apps/details?id=net.flixster.android">https://play.google.com/store/apps/details?id=net.flixster.android</a></li>
-                        <li>Sparkasse - Star Finanz GmbH - <a href="https://play.google.com/store/apps/details?id=com.starfinanz.smob.android.sfinanzstatus">https://play.google.com/store/apps/details?id=com.starfinanz.smob.android.sfinanzstatus</a></li>
-                        <li>City Video (Citytv) - Rogers Digital Media - <a href="https://play.google.com/store/apps/details?id=com.rogers.citytv.phone">https://play.google.com/store/apps/details?id=com.rogers.citytv.phone</a></li>
-                        <li>ラブライブ！スクールアイドルフェスティバル - KLab - <a href="https://play.google.com/store/apps/details?id=klb.android.lovelive">https://play.google.com/store/apps/details?id=klb.android.lovelive</a></li>
-                        <li>예스24 전자도서관 (Yes24) - YES24 - <a href="https://play.google.com/store/apps/details?id=com.incube.epub">https://play.google.com/store/apps/details?id=com.incube.epub</a></li>
-                        <li>Yuppi - Yuppi Mobil A.Ş. - <a href="https://play.google.com/store/apps/details?id=com.ovidos.yuppi ( as of v1.2)">https://play.google.com/store/apps/details?id=com.ovidos.yuppi</a></li>
-                    </ul>
-                    <br />
-                    <br />
-                    For apps that do not work with RootCloak, try <a href="/rootcloakplus/">RootCloak Plus</a>.
-                </div>
-                
-                <div class="item">
-                    <span style="font-weight: 300; font-size: 14px;">All content authored by: devadvance (<a href="https://plus.google.com/115147267178456662187?rel=author">+Matt Joseph)</a></span>
-                </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <br />
+          <div class="row">
+            <div class="small-3 columns">
+             <img src="/img/RootCloakIcon.png" />
             </div>
+
+            <div class="small-9 columns">
+            <p>This Android app is a module for the Xposed Framework. Some apps, such as banking, enterprise, or audio/video apps will not run if your phone is rooted. This allows you to run apps that detect root without disabling root.</p>
+            <a href="http://repo.xposed.info/module/com.devadvance.rootcloak" class="small button">Download (from Xposed repo)</a> 
+            <a href="http://forum.xda-developers.com/showthread.php?t=2574647" class="small button">XDA Support Thread</a> 
+            <a href="https://github.com/devadvance/rootcloak" class="small button">Source Code (GitHub)</a>
+            </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+
+    
+
+    <div class="row">
+      <div class="large-12 columns">
+      <div class="panel">
+      <h3>Apps successfully tested:</h3>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th width="150">Developer</th>
+              <th width="100">Play Store Link</th>
+              <th width="150">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DME Mail</td>
+              <td>Excitor</td>
+              <td><a href="https://play.google.com/store/apps/details?id=dk.excitor.dmemail">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Fox Digital Copy</td>
+              <td>Fox</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.fde.DomesticDigitalCopy">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>DirecTV GenieGo</td>
+              <td>DirecTV</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.directv.application.android.go.production">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Best Buy CinemaNow</td>
+              <td>Best Buy</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.res.bby">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bright House TV</td>
+              <td>Bright House</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.BHTV">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Mobile Pay</td>
+              <td>Apriva</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.apriva.mobile.bams">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>AprivaPay</td>
+              <td>Apriva</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.apriva.mobile.aprivapay">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>IKO</td>
+              <td>PKO Bank Polski SA</td>
+              <td><a href="https://play.google.com/store/apps/details?id=pl.pkobp.iko">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bradford Mobile Agent</td>
+              <td>Bradford Networks</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.bradfordnetworks.bma">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ParcelSend</td>
+              <td>Australia Post Digital</td>
+              <td><a href="https://play.google.com/store/apps/details?id=au.com.auspost">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Worx Home by Citrix</td>
+              <td>Zenprise</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.zenprise">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Movies by Flixster</td>
+              <td>Flixster</td>
+              <td><a href="https://play.google.com/store/apps/details?id=net.flixster.android">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sparkasse</td>
+              <td>Star Finanz GmbH</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.starfinanz.smob.android.sfinanzstatus">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>City Video (Citytv)</td>
+              <td>Rogers Digital Media</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.rogers.citytv.phone">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ラブライブ！スクールアイドルフェスティバル</td>
+              <td>KLab</td>
+              <td><a href="https://play.google.com/store/apps/details?id=klb.android.lovelive">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>예스24 전자도서관 (Yes24)</td>
+              <td>YES24</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.incube.epub">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Yuppi</td>
+              <td>Yuppi Mobil A.Ş.</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.ovidos.yuppi">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>AirWatch MDM Agent</td>
+              <td>AirWatch</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.airwatch.androidagent">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Isis Mobile Wallet</td>
+              <td>AT&amp;T</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.isis.mclient.atnt.activity">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Isis Mobile Wallet</td>
+              <td>Verizon Wireless</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.isis.mclient.verizon.activity">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Divide</td>
+              <td>Enterproid</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.enterproid.divideinstaller">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>TV 2 Play</td>
+              <td>TV 2|Danmark</td>
+              <td><a href="https://play.google.com/store/apps/details?id=dk.tv2.tv2play">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>InBank</td>
+              <td>Phoenix Informatica Bancaria Spa</td>
+              <td><a href="https://play.google.com/store/apps/details?id=it.phoenixspa.inbank">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Cubovision</td>
+              <td>Telecom Italia S.p.a.</td>
+              <td><a href="https://play.google.com/store/apps/details?id=it.telecomitalia.cubovision">Link</a></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Apps tentatively working:</h3>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th width="150">Developer</th>
+              <th width="100">Play Store Link</th>
+              <th width="150">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Good for Enterprise</td>
+              <td>Good Technology</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.good.android.gfe">Link</a></td>
+              <td>Seems to work with stock ROMs.</td>
+            </tr>
+            <tr>
+              <td>D3 GO</td>
+              <td>D3 GO</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.zappware.twintv.d3">Link</a></td>
+              <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>Apps that cannot work with RootCloak (but work with <a href="/rootcloakplus/">RootCloak Plus</a>):</h3>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th width="150">Developer</th>
+              <th width="100">Play Store Link</th>
+              <th width="150">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WebTV</td>
+              <td>Stofa</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.stofa.webtv">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Barclays Mobile Banking</td>
+              <td>Barclays</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.barclays.android.barclaysmobilebanking">Link</a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>S-pushTAN</td>
+              <td>Star Finanz GmbH</td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.starfinanz.mobile.android.pushtan">Link</a></td>
+              <td></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        All content authored by: devadvance (<a href="https://plus.google.com/115147267178456662187?rel=author">+Matt Joseph</a>).
+      </div>
+    </div>
+    </div>
+    
+    <script src="/js/jquery.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script>
+    $(document).foundation();
+      </script>
+    
+    
+  </body>
 </html>
